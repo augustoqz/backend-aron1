@@ -1,0 +1,29 @@
+//function login(email, senha){
+    //if(email === "email@gmail.com" && senha === "familia"){
+       // return "Status 200 (Cetin zé)"
+    //}else{
+      //  return "Status 400 (Errado zé)"
+    //}
+//}
+//const email = prompt("Digite o email: ");
+//const senha = prompt("Digite a senha: ");
+
+//const response = login(email, senha);
+
+//console.log(response);
+
+function registrar(email, senha,  confirmar_senha, data, telefone){
+    if(email === "" || senha === "" || confirmar_senha === "" || data === ""||
+     telefone === ""){
+        return "Status 400 (Todos os campos são necessários)"
+     }else{
+        if(senha != confirmar_senha){
+            return "Status 400 (As senhas devem ser iguais)"
+        }else{
+            return "Status 200 (Certin zé)"
+        }
+     }
+    }
+    const res = registrar("email@gmail.com", "casa", "casa", "abcd", "4599123123");
+
+    console.log(res);
